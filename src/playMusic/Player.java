@@ -250,6 +250,7 @@ public class Player {
             showLyrics.close();
         }
         needToLoadTime = true;
+//        mediaPlayer = new MediaPlayer(new Media(songList[nowPlayingIndex].musicSrc));
         mediaPlayer = new MediaPlayer(new Media(_playlist.get(nowPlayingIndex).musicSrc));
         initMediaPlayer();
         mediaPlayer.play();

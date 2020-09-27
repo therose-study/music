@@ -47,6 +47,7 @@ public class TitlePane extends Pane {
                 this.setPrefSize(1000, 50);
                 this.setStyle("-fx-background-color: #c73c3c");
 
+                initLogo();
                 initClose();
                 initMinimize();
                 initSearch();
@@ -55,6 +56,22 @@ public class TitlePane extends Pane {
                 this.getChildren().addAll(logo,close,minimize,searchTextField,search);
         }
 
+        private void initLogo(){
+                logo = new ImageView();
+                logo.setFitWidth(130);
+                logo.setFitHeight(40);
+                logo.setLayoutX(40);
+                logo.setLayoutY(5);
+
+                logo.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent event) {
+
+                        }
+                });
+                logo.setOnMouseEntered(enter);
+                logo.setOnMouseExited(exit);
+        }
 
         private void initClose(){
                 close = new ImageView(new Image(getClass().getResource("image/close.png").toExternalForm()));

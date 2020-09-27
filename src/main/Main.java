@@ -118,6 +118,15 @@ public class Main extends Application {
                 titleStage.close();
             }
         });
+
+//        Song prepareSong = new Song();
+//        prepareSong.songName =  "MOM (温柔女声版)（翻自 蜡笔小新）";
+//        prepareSong.imgSrc = "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg";
+//        prepareSong.duration =  32976;
+//        prepareSong.singer = "姚淳淳";
+//        prepareSong.songId = "1434980678";
+//        prepareSong.mvId ="0";
+//        play(wyy.getSongDetail(prepareSong));
     }
 
     public static void main(String[] args){
@@ -203,6 +212,7 @@ public class Main extends Application {
         mainStage = new Stage();
         scene1 = new Scene(playlistListPane,800,600);
         scene1.setFill(Color.WHITE);
+        //-fx-background-color: white ;f
         playlistListPane.setStyle("-fx-background-color: #ffffff ;");
         scene2 = new Scene(songListPane,800,600);
         scene3 = new Scene(topListPane,800,600);
@@ -217,4 +227,28 @@ public class Main extends Application {
         player.addMusic(song);
     }
 
+//    private void loadBackground(){
+//        ImageView background = new ImageView(new Image(getClass().getResource("bg.jpeg").toExternalForm()));
+//        background.setFitWidth(1000);
+//        background.setFitHeight(600);
+//        Pane bgPane = new Pane(background);
+//        Scene bgScene = new Scene(bgPane,1000,600);
+//        bgStage = new Stage();
+//        bgStage.setScene(bgScene);
+//        bgStage.initStyle(StageStyle.TRANSPARENT);
+//        bgStage.setX(x);
+//        bgStage.setY(y+50);
+//        Pane maskPane = new Pane();
+//        Scene maskScene = new Scene(maskPane,1000,600);
+//        maskPane.setStyle("-fx-background-color:white;-fx-opacity: 0.4;");
+//        bgPane.getChildren().addAll(maskPane);
+//        maskScene.setFill(null);
+//        maskStage = new Stage();
+//        maskStage.initStyle(StageStyle.TRANSPARENT);
+//        maskStage.setScene(maskScene);
+//        maskStage.setX(x);
+//        maskStage.setY(y+50);
+////        bgStage.initModality(Modality.APPLICATION_MODAL);
+////        maskStage.initModality(Modality.APPLICATION_MODAL);
+//    }
 }

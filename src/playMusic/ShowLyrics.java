@@ -41,10 +41,15 @@ public class ShowLyrics extends Stage {
         this.setX(sw/2-w/2);
         this.setY(17*sh/18-h/2);
         font = new Font("Microsoft YaHei",50);
+//        InnerShadow is = new InnerShadow();
+//        is.setOffsetX(4.0f);
+//        is.setOffsetY(4.0f);
         Text text = new Text();
         text.setFont(font);
         text.setLayoutY(50);
         text.setFill(Paint.valueOf("#c73c3c"));
+//        text.setFont(Font.font(null, FontWeight.BOLD, 50));
+//        text.setEffect(is);
         Pane pane = new Pane();
         pane.getChildren().add(text);
         pane.setStyle("-fx-background:transparent;");
